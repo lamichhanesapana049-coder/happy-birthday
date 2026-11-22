@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Supriya Tamang 💖✨</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Floating Audio Control Button -->
+    <div class="music-control" id="musicToggle" title="Click to Play / Pause Music">
+        <i data-lucide="music"></i>
+    </div>
+    <audio id="bg-music" loop autoplay>
+        <source src="romantic_song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home" class="nav-btn active"><i data-lucide="sparkles"></i> Home</a>
+        <a href="#reasons" class="nav-btn"><i data-lucide="heart"></i> Why You</a>
+        <a href="#cake" class="nav-btn"><i data-lucide="cake"></i> Wish</a>
+        <a href="#gallery" class="nav-btn"><i data-lucide="image"></i> Memories</a>
+        <a href="#letter" class="nav-btn"><i data-lucide="mail"></i> Letter</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="crown-badge">👑✨</div>
+        <h1 class="hero-title">Happy Birthday, Supriya Tamang!</h1>
+        <h2 class="hero-subtitle">To the prettiest & sweetest best friend who means everything to me 💖</h2>
+
+        <div class="hero-photo-ring" onclick="triggerConfetti()">
+            <img src="images/image1.jpg" alt="Supriya Tamang">
+            <div class="ring-pulse"></div>
+        </div>
+
+        <p class="hero-description">
+            Today is all about celebrating <strong>YOU</strong>—the most amazing, kindest, and prettiest soul in the world.
+            You've been through everything with me—standing by my side through every milestone, every laugh, and every moment.
+            Thank you for being my constant light, my best friend, and my greatest blessing. 🌸✨
+        </p>
+
+        <div class="hero-btns">
+            <a href="#cake" class="btn-primary fancy-btn"><i data-lucide="cake"></i> Blow The Candles 🎂</a>
+            <button onclick="openEnvelope()" class="btn-secondary fancy-btn"><i data-lucide="mail"></i> Read Love Note 💌</button>
+            <button onclick="triggerConfetti()" class="btn-primary fancy-btn glow-btn"><i data-lucide="sparkles"></i> Surprise Blast! 🎉</button>
+        </div>
+    </section>
+
+    <!-- Why You Mean Everything Section -->
+    <section id="reasons" class="section-container">
+        <h2 class="section-title">Why You Mean Everything To Me 💕</h2>
+        <p class="section-subtitle">A few reasons why you are so deeply special in my life...</p>
+
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <div class="reason-icon"><i data-lucide="shield-heart"></i></div>
+                <h3 class="reason-title">Been Through Everything</h3>
+                <p class="reason-text">Through every high and low, every smile and struggle, you stood by my side. You stayed when things were tough, and that means the world to me.</p>
+            </div>
+
+            <div class="reason-card">
+                <div class="reason-icon"><i data-lucide="smile"></i></div>
+                <h3 class="reason-title">Prettiest & Sweetest Heart</h3>
+                <p class="reason-text">Your pure soul, warmth, and genuine kindness brighten up every space you walk into. You have a heart of absolute gold.</p>
+            </div>
+
+            <div class="reason-card">
+                <div class="reason-icon"><i data-lucide="sparkles"></i></div>
+                <h3 class="reason-title">Unmatched Vibe & Energy</h3>
+                <p class="reason-text">From stunning traditional saree looks to adorable pouts and goofy moments with birds—your energy is truly one of a kind!</p>
+            </div>
+
+            <div class="reason-card">
+                <div class="reason-icon"><i data-lucide="gem"></i></div>
+                <h3 class="reason-title">Forever My Best Confidante</h3>
+                <p class="reason-text">I can share anything with you without hesitation. You understand me better than anyone, and I am endlessly grateful for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cake Ceremony Section -->
+    <section id="cake" class="section-container">
+        <h2 class="section-title">Interactive Birthday Cake 🎂</h2>
+        <p class="section-subtitle">Click each candle flame to blow it out & make a birthday wish!</p>
+
+        <div class="cake-wrapper">
+            <div class="cake-body">
+                <div class="plate"></div>
+                <div class="layer layer-bottom"></div>
+                <div class="layer layer-middle"></div>
+                <div class="layer layer-top"></div>
+                <div class="frosting"></div>
+
+                <div class="candles-group">
+                    <div class="candle" onclick="blowCandle(this)">
+                        <div class="flame"></div>
+                        <div class="smoke"></div>
+                    </div>
+                    <div class="candle" onclick="blowCandle(this)">
+                        <div class="flame"></div>
+                        <div class="smoke"></div>
+                    </div>
+                    <div class="candle" onclick="blowCandle(this)">
+                        <div class="flame"></div>
+                        <div class="smoke"></div>
+                    </div>
+                    <div class="candle" onclick="blowCandle(this)">
+                        <div class="flame"></div>
+                        <div class="smoke"></div>
+                    </div>
+                    <div class="candle" onclick="blowCandle(this)">
+                        <div class="flame"></div>
+                        <div class="smoke"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <button class="fancy-btn btn-primary" onclick="blowAllCandles()"><i data-lucide="wind"></i> Blow All Candles! 🕯️</button>
+            </div>
+
+            <div id="wish-message" class="wish-unlocked-message">
+                🎉 Woohoo! Happy Birthday Supriya! May your life be filled with endless love, happiness, success & laughter! 💖✨
+            </div>
+        </div>
+    </section>
+
+    <!-- Memory Lane Polaroid Photo Gallery -->
+    <section id="gallery" class="section-container">
+        <h2 class="section-title">Supriya's Precious Gallery 📸✨</h2>
+        <p class="section-subtitle">Click on any photo to zoom in & read the caption!</p>
+
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Dynamically populated from JS -->
+        </div>
+    </section>
+
+    <!-- Heartfelt Letter & Envelope Section -->
+    <section id="letter" class="section-container">
+        <h2 class="section-title">A Special Letter For You 💌</h2>
+        <p class="section-subtitle">Click on the envelope to open your birthday note!</p>
+
+        <div class="envelope-container">
+            <div class="envelope-card" id="envelope" onclick="openEnvelope()">
+                <div class="envelope-icon"><i data-lucide="mail"></i></div>
+                <div class="wax-seal-badge"><i data-lucide="heart"></i></div>
+                <h3 class="envelope-title">Open Supriya's Letter</h3>
+                <p class="envelope-sub">Click here to unfold the special message 💖</p>
+                <button class="fancy-btn btn-primary" style="margin-top: 15px;" onclick="openEnvelope()"><i data-lucide="mail-open"></i> Read Letter</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated Letter Modal Overlay -->
+    <div class="modal-overlay" id="letter-modal" onclick="closeEnvelope()">
+        <div class="letter-modal-card" onclick="event.stopPropagation()">
+            <!-- Prominent Close Cross Button -->
+            <button class="modal-close-btn" onclick="closeEnvelope()" title="Close Letter">&times;</button>
+
+            <div class="letter-header">
+                <i data-lucide="heart" class="heart-icon-header"></i>
+                <h3 class="letter-title">Dearest Supriya,</h3>
+            </div>
+
+            <div class="letter-body-content">
+                <p>Happy Birthday to the most special, beautiful, and sweetest person in my life! 🌸✨</p>
+                <p>I wanted to create this special website just for you to remind you how much you mean to me. You have literally been through everything with me—standing by my side through thick and thin, sharing every laughter, every secret, and every milestone.</p>
+                <p>Having someone as loyal, genuine, kind, and beautiful as you in my life is a true blessing. No matter where life takes us, you will always hold a very special place in my heart.</p>
+                <p>May this birthday bring you infinite joy, good health, endless smiles, and all the happiness in the universe. Never stop being the amazing, radiant soul you are! 🎉💖</p>
+
+                <div class="letter-signature-box">
+                    <span>Forever grateful for you,</span><br>
+                    <strong>Your Best Friend 💕</strong>
+                </div>
+            </div>
+
+            <div class="letter-footer-action">
+                <button class="fancy-btn btn-secondary" onclick="closeEnvelope()"><i data-lucide="x"></i> Close Letter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div class="modal-overlay" id="lightbox" onclick="closeLightbox()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close-btn" onclick="closeLightbox()">&times;</span>
+            <img src="" alt="Zoom Photo" class="modal-img" id="modal-img">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Crafted with endless love <span class="heart-icon"><i data-lucide="heart"></i></span> for <strong>Supriya Tamang</strong> on her Special Day 👑🎂</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
