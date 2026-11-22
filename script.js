@@ -148,16 +148,16 @@ function checkAllCandles() {
 
 // 6. Polaroid Photo Gallery
 const galleryData = [
-    { src: 'images/image1.jpg', caption: 'Timeless Elegance ✨' },
-    { src: 'images/image2.jpg', caption: 'Exploring with Grace 🌸' },
-    { src: 'images/image3.jpg', caption: 'Saree Magic & Balloons 🎈' },
-    { src: 'images/image4.jpg', caption: 'Playful & Cute Vibe ✌️' },
-    { src: 'images/image5.jpg', caption: 'Royal Blue Princess 💙' },
-    { src: 'images/image6.jpg', caption: 'On Top Of The World 🌤️' },
-    { src: 'images/image7.jpg', caption: 'Sunshine Smile 💛' },
-    { src: 'images/image8.jpg', caption: 'Ethereal Teal Beauty 🩵' },
-    { src: 'images/image9.jpg', caption: 'Cool Sunglasses & Sky 🕶️' },
-    { src: 'images/image10.jpg', caption: 'Soft Heart & Parrot 🦜' }
+    { src: 'image1.jpg', caption: 'Timeless Elegance ✨' },
+    { src: 'image2.jpg', caption: 'Exploring with Grace 🌸' },
+    { src: 'image3.jpg', caption: 'Saree Magic & Balloons 🎈' },
+    { src: 'image4.jpg', caption: 'Playful & Cute Vibe ✌️' },
+    { src: 'image5.jpg', caption: 'Royal Blue Princess 💙' },
+    { src: 'image6.jpg', caption: 'On Top Of The World 🌤️' },
+    { src: 'image7.jpg', caption: 'Sunshine Smile 💛' },
+    { src: 'image8.jpg', caption: 'Ethereal Teal Beauty 🩵' },
+    { src: 'image9.jpg', caption: 'Cool Sunglasses & Sky 🕶️' },
+    { src: 'image10.jpg', caption: 'Soft Heart & Parrot 🦜' }
 ];
 
 const galleryGrid = document.getElementById('gallery-grid');
